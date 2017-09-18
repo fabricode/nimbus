@@ -14,10 +14,13 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "color": "^0.11.3",
     "expo": "^18.0.3",
+    "humps": "^2.0.1",
     "lodash": "^4.13.1",
     "moment": "^2.13.0",
+    "normalizr": "^3.2.3",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.45.1",
     "react-native-code-push": "2.0.1-beta",
@@ -31,13 +34,16 @@
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
     "redux-form": "^7.0.2",
+    "redux-logger": "^3.0.6",
     "redux-persist": "^4.0.0",
+    "redux-saga": "^0.15.6",
     "redux-thunk": "^2.2.0",
     "remote-redux-devtools": "^0.5.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "babel-jest": "17.0.0",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-react-native": "1.9.0",
     "chai": "^3.5.0",
     "eslint": "^3.5.0",

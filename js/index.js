@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 // import CodePush from "react-native-code-push";
 import { View, Text, StyleSheet } from "react-native";
+import { connect } from 'react-redux'
+import Login from './views/auth/containers'
 // import Modal from "react-native-modalbox";
 // import MainStackRouter from "./config/routers/MainStackRouter";
 // import ProgressBar from "./components/loaders/ProgressBar";
-
 // const styles = StyleSheet.create({
 //   container: {
 //     flex: 1,
@@ -113,13 +114,18 @@ import { View, Text, StyleSheet } from "react-native";
 //     //         </View>
 //     //   );
 //     // }
-    export default class Index extends React.Component {
+    const renderLoginOrAuthenticated = (authenticated) => {
+      if(authenticated){
+        return <Text>authenticated</Text>
+      } else {
+        return <Login />
+      }
+    }
+    class Index extends React.Component {
       render() {
         return (
           <View style={styles.container}>
-            <Text>Indexcool</Text>
-            <Text>Changes you make will automatically reload.</Text>
-            <Text>Shake your phone to open the developer menu.</Text>
+            {renderLoginOrAuthenticated(this.props.authenticated)}
           </View>
         );
       }
@@ -133,3 +139,16 @@ import { View, Text, StyleSheet } from "react-native";
         justifyContent: 'center',
       },
     });
+
+    // container
+
+  const mapStateToProps = (state, ownProps) => {
+    return {
+      authenticated: state.auth.authenticated
+    }
+  }
+  const IndexContainer = connect(
+    mapStateToProps
+  )(Index)
+
+export default IndexContainer
