@@ -16,8 +16,10 @@
   "dependencies": {
     "axios": "^0.16.2",
     "color": "^0.11.3",
+    "es6-promise": "^4.1.1",
     "expo": "^18.0.3",
     "humps": "^2.0.1",
+    "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.13.1",
     "moment": "^2.13.0",
     "normalizr": "^3.2.3",

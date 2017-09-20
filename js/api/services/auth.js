@@ -1,22 +1,23 @@
-import api_address from '../config'
-import axios from 'axios'
+import api_address from '../config';
+import axios from 'axios';
 
 const login = (username, password) => {
-  let login_endpoint = `${api_address}/helloworld`
-  debugger
-  axios.get(login_endpoint, {
-    auth: {
-      username,
-      password
-    }
+  let method = 'get'
+  let url = `https://${api_address}/helloworld`
+  let auth = {
+    username,
+    password
+  }
+  return axios({
+    method,
+    url,
+    auth
   })
-  .then((response) => {
-    debugger
-    console.log(response)
+  .then(function(response){
+      return {network_error: false, response}
   })
   .catch((error) => {
-    debugger
-    console.log(error)
+      return {network_error: true, error}
   })
 }
 
