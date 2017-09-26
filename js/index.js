@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { connect } from 'react-redux'
 import Login from './views/auth/containers'
+import { SignedOut, SignedIn } from './config/routers/router'
 // import Modal from "react-native-modalbox";
 // import MainStackRouter from "./config/routers/MainStackRouter";
 // import ProgressBar from "./components/loaders/ProgressBar";
@@ -124,9 +125,7 @@ import Login from './views/auth/containers'
     class Index extends React.Component {
       render() {
         return (
-          <View style={styles.container}>
-            {renderLoginOrAuthenticated(this.props.authenticated)}
-          </View>
+          <SignedIn />
         );
       }
     }

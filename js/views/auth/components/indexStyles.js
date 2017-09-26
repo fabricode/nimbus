@@ -2,12 +2,15 @@ import { StyleSheet } from 'react-native';
 import commonStyles from '../../../styles'
 
 const indexStyles = StyleSheet.create({
-  formContainer: {
+  textInput: {
     width: '100%',
   },
   loginButton: {
     marginTop: '10%',
+  },
+  formContainer: {
+    width: '90%',
   }
 });
 
-export default {...indexStyles, ...commonStyles}
+export default {...commonStyles, ...indexStyles}
