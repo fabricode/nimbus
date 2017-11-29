@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { View, TouchableOpacity, TouchableWithoutFeedback, Keyboard, Text } from "react-native";
 import { connect } from "react-redux";
 import { DrawerNavigator, NavigationActions } from "react-navigation";
-import { Grid, Row } from "react-native-easy-grid";
 import { FormLabel, FormInput, FormValidationMessage, Button } from 'react-native-elements'
 import styles from './indexStyles'
 

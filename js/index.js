@@ -115,19 +115,14 @@ import { SignedOut, SignedIn } from './config/routers/router'
 //     //         </View>
 //     //   );
 //     // }
-    const renderLoginOrAuthenticated = (authenticated) => {
-      if(authenticated){
-        return <Text>authenticated</Text>
-      } else {
-        return <Login />
-      }
-    }
     class Index extends React.Component {
-      render() {
-        return (
-          <SignedIn />
-        );
-      }
+      render = () => (
+        this.props.authenticated
+        ?
+        <SignedIn />
+        :
+        <SignedOut />
+        )
     }
 
     const styles = StyleSheet.create({

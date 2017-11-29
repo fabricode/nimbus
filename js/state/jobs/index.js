@@ -1,7 +1,7 @@
-import HomeReducer from "./reducers";
+import JobsReducer from "./reducers";
 
-export { default as homeSelectors } from "./selectors";
-export { default as homeOperations } from "./operations";
-export { default as homeTypes } from "./types";
+export { default as jobSelectors } from "./selectors";
+export { default as jobOperations } from "./operations";
+export { default as jobTypes } from "./types";
 
-export default HomeReducer;
+export default JobsReducer;

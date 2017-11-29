@@ -3,7 +3,7 @@ import { authSelectors } from '../state/auth'
 import { put, takeLatest, takeEvery, call, select, fork } from 'redux-saga/effects'
 import authApi from '../api/services/auth'
 
-function* fetchLogin () {
+const fetchLogin = function* fetchLogin () {
   try {
     let {username, password} = yield select(authSelectors.getUsernamePassword)
     if(username && password){

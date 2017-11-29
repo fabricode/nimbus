@@ -7,14 +7,17 @@ import promise from './promise';
 import { createLogger } from 'redux-logger'
 import createSagaMiddleware from 'redux-saga'
 import rootSaga from '../../sagas'
+import { composeWithDevTools } from 'remote-redux-devtools';
 
 export default function configureStore(initialState) {
 
   const sagaMiddleware = createSagaMiddleware();
 
-  const store = createStore(reducer, applyMiddleware(sagaMiddleware));
+  const store = createStore(reducer, composeWithDevTools(
+    applyMiddleware(sagaMiddleware)
+  ));
 
   sagaMiddleware.run(rootSaga)
-  
+
   return store;
 }

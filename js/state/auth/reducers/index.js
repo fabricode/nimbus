@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import types from '../types';
 
 const initialState = {
-  authenticated: false,
+  authenticated: true,
   token: '',
   username: '',
   usernameError: '',

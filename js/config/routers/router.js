@@ -4,7 +4,7 @@ import { FontAwesome } from "react-native-vector-icons";
 
 import Auth from "../../views/auth/containers";
 
-import Jobs from "../../views/jobs/components";
+import JobNavigation from "./jobRouter";
 import Review from "../../views/review/components";
 
 export const SignedOut = StackNavigator({
@@ -18,7 +18,7 @@ export const SignedOut = StackNavigator({
 
 export const SignedIn = TabNavigator({
   Jobs: {
-    screen: Jobs,
+    screen: JobNavigation,
     navigationOptions: {
       tabBarLabel: "Jobs",
       tabBarIcon: ({ tintColor }) => (
